@@ -64,8 +64,8 @@ __context_color_random_color() {
     # Algorithm taken from http://www.niwa.nu/2013/05/math-behind-colorspace-conversions-rgb-hsl/
     # All numbers here need to be floats, so they're all multiplied by 10,000
     local h=$(__context_color_rand_mod $r1 0 10000)
-    local s=$(__context_color_rand_mod $r2 $(( 42*10000/255 )) $(( 98*10000/255 )) )
-    local l=$(__context_color_rand_mod $r3 $(( 40*10000/255 )) $(( 90*10000/255 )) )
+    local s=$(__context_color_rand_mod $r2 $(( 42*10000/255 )) $(( 255*10000/255 )) )
+    local l=$(__context_color_rand_mod $r3 $(( 80*10000/255 )) $(( 150*10000/255 )) )
 
     local t1=0
     if [[ $l -lt 5000 ]]; then
